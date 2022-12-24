@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv';
 import 'reflect-metadata';
 import 'express-async-errors';
 
@@ -8,6 +9,8 @@ import './database';
 import './shared/container';
 import { router } from './routes';
 import { AppError } from './shared/errors/AppError';
+
+dotenv.config();
 
 const app = express();
 
