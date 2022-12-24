@@ -1,0 +1,8 @@
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_DB: fin_api
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"

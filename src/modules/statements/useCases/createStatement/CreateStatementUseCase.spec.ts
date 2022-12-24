@@ -30,7 +30,7 @@ describe('Create Statement', () => {
     const statement = await createStatementUseCase.execute({
       user_id: user.id,
       type: 'deposit',
-      amount: 1_000,
+      amount: 100.00,
       description: 'First deposit'
     } as ICreateStatementDTO);
 
@@ -44,7 +44,7 @@ describe('Create Statement', () => {
       await createStatementUseCase.execute({
         user_id: 'XXXXXXXXXXXXXXXXXXXXXX',
         type: 'deposit',
-        amount: 1_000,
+        amount: 100.00,
         description: 'First deposit'
       } as ICreateStatementDTO);
     } catch (e) {
@@ -59,7 +59,7 @@ describe('Create Statement', () => {
       await createStatementUseCase.execute({
         user_id: user.id,
         type: 'withdraw',
-        amount: 2_000,
+        amount: 200.00,
         description: 'First withdraw'
       } as ICreateStatementDTO);
     } catch (e) {
